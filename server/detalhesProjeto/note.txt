@@ -1,0 +1,121 @@
+Projeto apiBiblioteca - https://g.co/gemini/share/2df52e593a60
+Itens a praticar
+
+agrupar as rotas por controller - ok
+
+    -Revisar conteúdo de exceções laravel e php - OK
+        Exceções globais e retornadas corretamente quando estiver esperando json
+            Log para erros globais não tratados
+
+                -try catch em geral e criar handler global para erros não controlados
+                Configurado o handler no laravel para pegar os erros não tratados e gerar log
+
+    -Revisar as formações de PHP e Laravel na parte de API
+        TODO: DESAFIO - SALVAR O NOME DO ARQUIVO COMO UM SLUG
+
+        Ter algum campo booleano e usar o cast (postgres devolve com t e f)
+            Campo active no User
+
+    -Revisar anotações
+        UTILIZAR OS CABEÇALHOS E STATUS CODE <<<<<<<
+        COMENTÁRIOS DE MODEL - OK
+
+    Métodos que retornem resultados em lotes ao invés de apenas individuais e retornar o builder no Repository - OK
+        Na realidade e-cidade talvez fosse legal ter além do construtor para montar o objeto, um método toArray() para facilitar a criação de múltiplos objetos a partir de uma query sql
+        processar em lote não é só a questão de performance mas também praticidade, como por exemplo o cgs duplos onde os duplos eram postos numa tabela e os registros eram lidos no script fazendo o acerto
+
+    -Middleware para rastrear rotas sendo usadas pelo usuário - OK
+
+    -Logs úteis - OK
+
+    -formRequest para GET com o Validator - sanitizar os dados <<<<<<< PRÓXIMA COISA A FAZER - OK
+        Mesmo no post usando formRequest oq acontece se mandar script? - Sanitizando
+        Proteção sql injection - testar e arrumar - TRABALHA EM CIMA DAS ASPAS PARA DIFERENCIAR O QUE E NÃO É STRING
+
+
+    -Relacionamentos dos 3 tipos e os métodos laravel - OK
+
+
+    -Documentar models - OK
+
+
+    -Service e Repository - OK
+
+    -Usar boas práticas API REST - OK
+
+
+    -Autenticação com SANCTUM api token - autenticar nas rotas de API ou WEB - REVISAR AO FAZER FRON TODO
+        Ver a parte de deixar a API mais segura
+        usar sanctum e habilidades de token - e caso queira navegar manualmente pela barra de pesquisa?
+        USAR CAMPO DIFERENTE DE EMAIL PARA LOGIN
+
+
+    -Sessão no banco - ok
+
+
+    -Utilizar Resource - ok
+        PARA COLEÇÃO E NÃO
+
+
+    -Salvar arquivo de mídia - TODO QUANDO TIVER FRONT
+
+
+    -CSRF Token no banco para rotas post, put, patch, delete - OK
+
+    -Criar tabela de tipo de usuário (Aluno, bibliotecário) - ok
+        só o bibliotecário pode emprestar e devolver livros
+        alterar a tabela users
+        Relação 1XAny com user
+
+    Será criado novo canal de log - OK
+
+    EXTRA
+
+    -Usar o JWT em alguma rota - AO FAZER FRONT
+
+    -Para as rotas get, talvez não usar url param para seguir o padrão rest - OK
+
+
+
+---PARA O PRÓXIMO PROJETO
+    FORM REQUEST ÚNICO ABSTRATO ONDE OS OUTROS HERDAM DELE PARA FACILITAR DEVOLVER MENSAGENS DE ERRO DE API E AUTHORIZE()
+
+    CLASSE DEFAULT DE RESPONSE PARA SEMPRE DEVOLVER OS MESMOS CAMPOS
+
+    VER SOBRE IMPLEMENTAR UM DTO PARA PASSAR OS DADOS AO SERVICE
+
+    próximo projeto usar taiga
+
+    Criar classe padrão talvez usando algo mais sobre DTO para transportar a resposta do service para o controller
+
+    confirmação de email no próximo projeto
+
+    Ver a melhor maneira de criar classes helpers para coisas como converter formato de data ao invés de um mutator em cada model
+        Não vale a pena ter setattribute de data em cada model ou um método específico para manipular data em cada model - Boilerplate  repetição de código
+
+    JWT
+
+    PAGINAÇÃO
+
+    SALVAR ARQUIVOS
+
+
+
+
+
+    Faz sentido criar a chave estrangeira com o mesmo tipo da chave primária referente, devido ao tamanho do id que a FK irá enviar
+
+
+
+
+
+public function all($keys = null) // rotas get com param obrigatório para usar no formrequest
+    {
+        $data = parent::all($keys);
+
+        foreach ($this->route()->parameterNames() as $paramName) {
+            $data[$paramName] = $this->route($paramName);
+
+        }
+        return $data;
+    }

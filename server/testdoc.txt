@@ -1,0 +1,63 @@
+Example (Tests\Unit\Example)
+ [x] Example
+
+Author Request (Tests\Unit\Requests\AuthorRequest)
+ [x] Data accepted with data set "acceptedData1"
+ [x] Data accepted with data set "acceptedData2"
+ [x] Data accepted with data set "acceptedData3"
+ [x] Data not accepted with data set "''"
+ [x] Data not accepted with data set #0
+ [x] Data not accepted with data set "256chars"
+ [x] Data not accepted with data set "without-name-key"
+ [x] Data not accepted with data set "without-dateBirth-key"
+ [x] Data not accepted with data set "2000-01-01"
+ [x] Data not accepted with data set "2000/01/01"
+ [x] Data not accepted with data set "2000/15/01"
+ [x] Data not accepted with data set "without-nationality-key"
+ [x] Data not accepted with data set #1
+ [x] Data not accepted with data set "255chars"
+ [x] Data name not accepted with data set "''"
+ [x] Data name not accepted with data set #0
+ [x] Data name not accepted with data set "256chars"
+ [x] Data name not accepted with data set "without-name-key"
+ [x] Data nationality not accepted with data set "''"
+ [x] Data nationality not accepted with data set "without-nationality-key"
+ [x] Data nationality not accepted with data set #0
+ [x] Data nationality not accepted with data set "255chars"
+ [x] Data date birth not accepted with data set "''"
+ [x] Data date birth not accepted with data set "without-dateBirth-key"
+ [x] Data date birth not accepted with data set "2000-01-01"
+ [x] Data date birth not accepted with data set "2000/01/01"
+ [x] Data date birth not accepted with data set "2000/15/01"
+
+Author Service (Tests\Unit\Services\AuthorService)
+ [x] Get authors true
+ [x] Get authors false
+
+Create Author Service (Tests\Unit\Services\CreateAuthorService)
+ [x] Create author true
+ [x] Create author false
+
+Create Genders Service (Tests\Unit\Services\CreateGendersService)
+ [x] Create genders true
+ [x] Create genders false
+
+Author Controller (Feature\Controllers\AuthorController)
+ [x] Get authors true
+ [x] Get authors false
+ [x] Create author true
+
+Gender Controller (Feature\Controllers\GenderController)
+ [x] Create genders true
+ [x] Create genders false
+
+Example (Tests\Feature\Example)
+ [x] Example
+
+Author Repository Eloquent (Feature\Repositories\AuthorRepositoryEloquent)
+ [x] Create author
+
+Gender Repository Eloquent (Feature\Repositories\GenderRepositoryEloquent)
+ [x] Create genders true with data set "multiple genres"
+ [x] Create genders true with data set "single genre"
+

@@ -1,0 +1,71 @@
+TUDO PRONTO DAQUI
+
+Basta fazer a requisição de qualquer domínio contanto que mande o cabeçalho Referer ou Origin correto? como proteger?
+    Testar com o front
+    navegador não deixa alterar esses headers
+
+ROTA PADRÃO SANCTUM // RETESTAR QUANDO TIVER FRONT <<<<<<<<< TODO
+    DESATIVAR - Rota padrão não devolvendo mais o cookie - ok
+    Só devolver o CSRF token na rota do mesmo - devolvendo apenas na rota custom - ok
+    arrumar tempo de vida do token (a cada requisição post regerar a sessão?) - ok - TOKEN APAGADO APÓS CADA REQUISIÇÃO QUE NÃO SEJA DA ROTA DO MESMO
+
+
+rodar migrations e seed nos testes
+arrumar nomes dataproviders dos requests
+
+tirar telescope do middleware de rastreio
+
+
+
+
+mandar params na rota como rest - ok
+
+Middleware para registrar rotas solicitadas - OK
+    Salvar rota - metodo - usuário logado se tiver - host - user agent - dataSolicitacao
+
+    aplicar restrições de FK - OK
+    testar novamente todos os request - OK
+    USAR ASPAS DUPLAS PARA AS MENSAGENS DE VALIDAÇÃO - OK
+    Criar novo canal de log - ok
+    Arrumar datas para usar date time - OK
+    criar seeders e factorys das principais entidades; - OK
+    verificar se tem problema em invocar classe entre parênteses - ok - não tem
+    testar tentar salvar um número maior que o tipo que o campo oferece - OK - da erro até mesmo no select disparando PDOExecption
+    ver os tratamento feito no momento de salvar = $saved - OK
+
+Rotina de consultas;
+    -Consultar todos os autores; - ok
+
+    -Consultar editores através de filtros e recuperar apenas se tiver para os filtros; - OK
+        Usar validate com o get - FOI USADO O FORM REQUEST QUE CONSEGUE OBTER AS VARIÁVEIS AO USAR URL PARAM - OK
+            testar os filtros e revisar o código --- ok
+
+    -Cadastro de usuários - TUDO OK
+        Campo active para dizer se o cadastro está ativado
+        o campo last_update será para a validade tendo 1 dia de validade para retirar os livros e será criado em tempo de execução
+        o campo register_active é para identificar se está ou não ativado apenas - setado em tempo de execução
+
+    -Cadastro de livros
+        trocar para snake case nome dos campos e seperar nomes compostos no banco - OK
+        retirar a tag package dos lugares onde o namespace for igual e acrescentar as tags de property nos FormRequests - OK
+        retestar os validate de array sem mandar de fato o valor - todos requests que usam - OK
+        Validar se o save está retornando true - OK
+
+    - Fazendo rotina de empréstimo >>>>>> FAZER EM LOTE NO FUTURO
+        // ver vídeo de exception do vinicius para ter ideia se trato no catch ou de outra forma - OK
+        o usuário não pode pegar o mesmo livro mais de uma vez - OK
+
+        otimizar métodos para trabalharem em lote - ok
+
+rotina de cadastro de autores, editoras e genêros. - FEITO
+
+Deve-se estar logado para isso - Usar SANCTUM_STATEFUL_DOMAINS=localhost:8000
+    Tirar método de data da User Model - ok
+    Revisar demais rotas - ok
+    logout - ok
+
+
+revisar as anotações de conteúdos e arrumar rotas para padrão rest
+    nos get::all usar paginate() - new PaginatedResourceResponse($response->data) - https://github.com/laravel/framework/issues/39665
+        Talvez paginar na mão <<<<<
+        PAGINAÇÃO AO FAZER FRONT TODO

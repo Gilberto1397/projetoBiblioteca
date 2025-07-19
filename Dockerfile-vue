@@ -1,0 +1,10 @@
+FROM node:20
+
+WORKDIR /vue-container
+
+ENV PORT=5173
+EXPOSE $PORT
+
+#COPY ./client ./
+
+CMD npm install && npm run dev -- --host 0.0.0.0 --port $PORT

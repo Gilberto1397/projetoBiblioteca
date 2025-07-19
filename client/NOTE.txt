@@ -1,0 +1,6 @@
+rota fallback - necessita de regex expecífico. Exemplo na Doc do vue 3 - https://router.vuejs.org/guide/migration/#Removed-star-or-catch-all-routes
+
+Div de carregando de tela inteira - ok
+
+validação com yup
+

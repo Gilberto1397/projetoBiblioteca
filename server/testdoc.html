@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Test Documentation</title>
+        <style>
+            body {
+                text-rendering: optimizeLegibility;
+                font-family: Source SansSerif Pro, Arial, sans-serif;
+                font-variant-ligatures: common-ligatures;
+                font-kerning: normal;
+                margin-left: 2rem;
+                background-color: #fff;
+                color: #000;
+            }
+
+            body > ul > li {
+                font-size: larger;
+            }
+
+            h2 {
+                font-size: larger;
+                text-decoration-line: underline;
+                text-decoration-thickness: 2px;
+                margin: 0;
+                padding: 0.5rem 0;
+            }
+
+            ul {
+                list-style: none;
+                margin: 0 0 2rem;
+                padding: 0 0 0 1rem;
+                text-indent: -1rem;
+            }
+
+            .success:before {
+                color: #4e9a06;
+                content: '✓';
+                padding-right: 0.5rem;
+            }
+
+            .defect {
+                color: #a40000;
+            }
+
+            .defect:before {
+                color: #a40000;
+                content: '✗';
+                padding-right: 0.5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Example (Tests\Unit\Example)</h2>
+        <ul>
+            <li class="success">Example</li>
+        </ul>
+        <h2>Author Request (Tests\Unit\Requests\AuthorRequest)</h2>
+        <ul>
+            <li class="success">Data accepted with data set "acceptedData1"</li>
+            <li class="success">Data accepted with data set "acceptedData2"</li>
+            <li class="success">Data accepted with data set "acceptedData3"</li>
+            <li class="success">Data not accepted with data set "''"</li>
+            <li class="success">Data not accepted with data set #0</li>
+            <li class="success">Data not accepted with data set "256chars"</li>
+            <li class="success">Data not accepted with data set "without-name-key"</li>
+            <li class="success">Data not accepted with data set "without-dateBirth-key"</li>
+            <li class="success">Data not accepted with data set "2000-01-01"</li>
+            <li class="success">Data not accepted with data set "2000/01/01"</li>
+            <li class="success">Data not accepted with data set "2000/15/01"</li>
+            <li class="success">Data not accepted with data set "without-nationality-key"</li>
+            <li class="success">Data not accepted with data set #1</li>
+            <li class="success">Data not accepted with data set "255chars"</li>
+            <li class="success">Data name not accepted with data set "''"</li>
+            <li class="success">Data name not accepted with data set #0</li>
+            <li class="success">Data name not accepted with data set "256chars"</li>
+            <li class="success">Data name not accepted with data set "without-name-key"</li>
+            <li class="success">Data nationality not accepted with data set "''"</li>
+            <li class="success">Data nationality not accepted with data set "without-nationality-key"</li>
+            <li class="success">Data nationality not accepted with data set #0</li>
+            <li class="success">Data nationality not accepted with data set "255chars"</li>
+            <li class="success">Data date birth not accepted with data set "''"</li>
+            <li class="success">Data date birth not accepted with data set "without-dateBirth-key"</li>
+            <li class="success">Data date birth not accepted with data set "2000-01-01"</li>
+            <li class="success">Data date birth not accepted with data set "2000/01/01"</li>
+            <li class="success">Data date birth not accepted with data set "2000/15/01"</li>
+        </ul>
+        <h2>Author Service (Tests\Unit\Services\AuthorService)</h2>
+        <ul>
+            <li class="success">Get authors true</li>
+            <li class="success">Get authors false</li>
+        </ul>
+        <h2>Create Author Service (Tests\Unit\Services\CreateAuthorService)</h2>
+        <ul>
+            <li class="success">Create author true</li>
+            <li class="success">Create author false</li>
+        </ul>
+        <h2>Create Genders Service (Tests\Unit\Services\CreateGendersService)</h2>
+        <ul>
+            <li class="success">Create genders true</li>
+            <li class="success">Create genders false</li>
+        </ul>
+        <h2>Author Controller (Feature\Controllers\AuthorController)</h2>
+        <ul>
+            <li class="success">Get authors true</li>
+            <li class="success">Get authors false</li>
+            <li class="success">Create author true</li>
+        </ul>
+        <h2>Gender Controller (Feature\Controllers\GenderController)</h2>
+        <ul>
+            <li class="success">Create genders true</li>
+            <li class="success">Create genders false</li>
+        </ul>
+        <h2>Example (Tests\Feature\Example)</h2>
+        <ul>
+            <li class="success">Example</li>
+        </ul>
+        <h2>Author Repository Eloquent (Feature\Repositories\AuthorRepositoryEloquent)</h2>
+        <ul>
+            <li class="success">Create author</li>
+        </ul>
+        <h2>Gender Repository Eloquent (Feature\Repositories\GenderRepositoryEloquent)</h2>
+        <ul>
+            <li class="success">Create genders true with data set "multiple genres"</li>
+            <li class="success">Create genders true with data set "single genre"</li>
+        </ul>
+    </body>
+</html>

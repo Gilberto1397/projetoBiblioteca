@@ -1,0 +1,59 @@
+services:
+  container-php:
+    container_name: container-para-php
+    build:
+      context: .
+      dockerfile: Dockerfile-php  # Usa o Dockerfile-php customizado
+    ports:
+      - "8000:8000"
+    volumes:
+      - type: bind
+        source: ./server/
+        target: /php-container
+    networks:
+      - compose-bridge
+    depends_on:
+      - postgres-container
+
+
+  vue-container:
+    container_name: container-para-vue
+    build:
+      context: .
+      dockerfile: Dockerfile-vue  # Usa o Dockerfile-vue customizado
+    volumes:
+      - type: bind
+        source: ./client/
+        target: /vue-container
+    ports:
+      - "5173:5173"
+    depends_on:
+      - container-php
+
+
+  postgres-container:
+    container_name: container-para-postgres
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: database
+    ports:
+      - "5432:5432"
+    volumes:
+      - type: bind
+        source: ./dadosPostgres/
+        target: /var/lib/postgresql/data
+    networks:
+      - compose-bridge
+
+
+networks:
+  compose-bridge:
+    driver: bridge
+#
+#volumes:
+#  php-container:
+#    driver: volume
+#  vue-container:
+#    driver: volume
