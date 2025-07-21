@@ -57,33 +57,59 @@
         </ul>
         <h2>Author Request (Tests\Unit\Requests\AuthorRequest)</h2>
         <ul>
-            <li class="success">Data accepted with data set "acceptedData1"</li>
-            <li class="success">Data accepted with data set "acceptedData2"</li>
-            <li class="success">Data accepted with data set "acceptedData3"</li>
-            <li class="success">Data not accepted with data set "''"</li>
-            <li class="success">Data not accepted with data set #0</li>
-            <li class="success">Data not accepted with data set "256chars"</li>
-            <li class="success">Data not accepted with data set "without-name-key"</li>
-            <li class="success">Data not accepted with data set "without-dateBirth-key"</li>
-            <li class="success">Data not accepted with data set "2000-01-01"</li>
-            <li class="success">Data not accepted with data set "2000/01/01"</li>
-            <li class="success">Data not accepted with data set "2000/15/01"</li>
-            <li class="success">Data not accepted with data set "without-nationality-key"</li>
-            <li class="success">Data not accepted with data set #1</li>
-            <li class="success">Data not accepted with data set "255chars"</li>
-            <li class="success">Data name not accepted with data set "''"</li>
-            <li class="success">Data name not accepted with data set #0</li>
-            <li class="success">Data name not accepted with data set "256chars"</li>
-            <li class="success">Data name not accepted with data set "without-name-key"</li>
-            <li class="success">Data nationality not accepted with data set "''"</li>
-            <li class="success">Data nationality not accepted with data set "without-nationality-key"</li>
-            <li class="success">Data nationality not accepted with data set #0</li>
-            <li class="success">Data nationality not accepted with data set "255chars"</li>
-            <li class="success">Data date birth not accepted with data set "''"</li>
-            <li class="success">Data date birth not accepted with data set "without-dateBirth-key"</li>
-            <li class="success">Data date birth not accepted with data set "2000-01-01"</li>
-            <li class="success">Data date birth not accepted with data set "2000/01/01"</li>
-            <li class="success">Data date birth not accepted with data set "2000/15/01"</li>
+            <li class="success">Data accepted with data set "AuthorRequest - acceptedData1"</li>
+            <li class="success">Data accepted with data set "AuthorRequest - acceptedData2"</li>
+            <li class="success">Data accepted with data set "AuthorRequest - acceptedData3"</li>
+            <li class="success">Data not accepted with data set "AuthorRequest - name = ''"</li>
+            <li class="success">Data not accepted with data set "AuthorRequest - name = 123"</li>
+            <li class="success">Data not accepted with data set "AuthorRequest - name = 255 chars"</li>
+            <li class="success">Data not accepted with data set "AuthorRequest - without name field"</li>
+            <li class="success">Data not accepted with data set "AuthorRequest - dateBirth = ''"</li>
+            <li class="success">Data not accepted with data set "AuthorRequest - without dateBirth field"</li>
+            <li class="success">Data not accepted with data set "AuthorRequest - dateBirth = 2000-01-01"</li>
+            <li class="success">Data not accepted with data set "AuthorRequest - dateBirth = 2000/01/01"</li>
+            <li class="success">Data not accepted with data set "AuthorRequest - dateBirth = 2000/15/01"</li>
+            <li class="success">Data not accepted with data set "AuthorRequest - nationality = ''"</li>
+            <li class="success">Data not accepted with data set "AuthorRequest - without nationality field"</li>
+            <li class="success">Data not accepted with data set "AuthorRequest - nationality = 123"</li>
+            <li class="success">Data not accepted with data set "AuthorRequest - nationality = 255 chars"</li>
+            <li class="success">Data name not accepted with data set "AuthorRequest - name = ''"</li>
+            <li class="success">Data name not accepted with data set "AuthorRequest - name = 123"</li>
+            <li class="success">Data name not accepted with data set "AuthorRequest - name = 255 chars"</li>
+            <li class="success">Data name not accepted with data set "AuthorRequest - without name field"</li>
+            <li class="success">Data nationality not accepted with data set "AuthorRequest - nationality = ''"</li>
+            <li class="success">Data nationality not accepted with data set "AuthorRequest - without nationality field"</li>
+            <li class="success">Data nationality not accepted with data set "AuthorRequest - nationality = 123"</li>
+            <li class="success">Data nationality not accepted with data set "AuthorRequest - nationality = 255 chars"</li>
+            <li class="success">Data date birth not accepted with data set "AuthorRequest - dateBirth = ''"</li>
+            <li class="success">Data date birth not accepted with data set "AuthorRequest - without dateBirth field"</li>
+            <li class="success">Data date birth not accepted with data set "AuthorRequest - dateBirth = 2000-01-01"</li>
+            <li class="success">Data date birth not accepted with data set "AuthorRequest - dateBirth = 2000/01/01"</li>
+            <li class="success">Data date birth not accepted with data set "AuthorRequest - dateBirth = 2000/15/01"</li>
+        </ul>
+        <h2>Gender Request (Tests\Unit\Requests\GenderRequest)</h2>
+        <ul>
+            <li class="success">Accepted data</li>
+            <li class="success">Data not accepted with data set "GenderRequest - listName = ''"</li>
+            <li class="success">Data not accepted with data set "GenderRequest - listName = 256 chars"</li>
+            <li class="success">Data not accepted with data set "GenderRequest - listName = 123"</li>
+            <li class="success">Data not accepted with data set "GenderRequest - listName[1] = 456"</li>
+            <li class="success">Data not accepted with data set "GenderRequest - singleName = ''"</li>
+            <li class="success">Data not accepted with data set "GenderRequest - singleName = 123"</li>
+            <li class="success">Data not accepted with data set "GenderRequest - singleName = 256 chars"</li>
+            <li class="success">Data not accepted with data set "GenderRequest - without singleName field"</li>
+        </ul>
+        <h2>Publisher Request (Tests\Unit\Requests\PublisherRequest)</h2>
+        <ul>
+            <li class="success">Data not accepted with data set "PublisherRequest - countryOrigin = ''"</li>
+            <li class="success">Data not accepted with data set "PublisherRequest - countryOrigin = 123"</li>
+            <li class="success">Data not accepted with data set "PublisherRequest - countryOrigin = 256 chars"</li>
+            <li class="success">Data not accepted with data set "PublisherRequest - without countryOrigin field"</li>
+            <li class="success">Data not accepted with data set "PublisherRequest - name = ''"</li>
+            <li class="success">Data not accepted with data set "PublisherRequest - name = 123"</li>
+            <li class="success">Data not accepted with data set "PublisherRequest - name = 256 chars"</li>
+            <li class="success">Data not accepted with data set "PublisherRequest - without name field"</li>
+            <li class="success">Data accepted</li>
         </ul>
         <h2>Author Service (Tests\Unit\Services\AuthorService)</h2>
         <ul>
@@ -100,6 +126,16 @@
             <li class="success">Create genders true</li>
             <li class="success">Create genders false</li>
         </ul>
+        <h2>Create Publisher Service (Tests\Unit\Services\CreatePublisherService)</h2>
+        <ul>
+            <li class="success">Create publisher true</li>
+            <li class="success">Create publisher false</li>
+        </ul>
+        <h2>Get Publisher Service (Tests\Unit\Services\GetPublisherService)</h2>
+        <ul>
+            <li class="success">Get publisher true</li>
+            <li class="success">Get publisher none</li>
+        </ul>
         <h2>Author Controller (Feature\Controllers\AuthorController)</h2>
         <ul>
             <li class="success">Get authors true</li>
@@ -110,6 +146,15 @@
         <ul>
             <li class="success">Create genders true</li>
             <li class="success">Create genders false</li>
+        </ul>
+        <h2>Publisher Controller (Feature\Controllers\PublisherController)</h2>
+        <ul>
+            <li class="success">Get publishers</li>
+            <li class="success">Create publisher</li>
+        </ul>
+        <h2>User Controller (Feature\Controllers\UserController)</h2>
+        <ul>
+            <li class="success">Create user true</li>
         </ul>
         <h2>Example (Tests\Feature\Example)</h2>
         <ul>
@@ -123,6 +168,15 @@
         <ul>
             <li class="success">Create genders true with data set "multiple genres"</li>
             <li class="success">Create genders true with data set "single genre"</li>
+        </ul>
+        <h2>Publisher Repository Eloquent (Feature\Repositories\PublisherRepositoryEloquent)</h2>
+        <ul>
+            <li class="success">Get all publishers</li>
+            <li class="success">Filtered publishers with data set "idFilter"</li>
+            <li class="success">Filtered publishers with data set "nameFilter"</li>
+            <li class="success">Filtered publishers with data set "countryFilter"</li>
+            <li class="success">Filtered publishers with data set "nameFilterNoResults"</li>
+            <li class="success">Create publisher</li>
         </ul>
     </body>
 </html>

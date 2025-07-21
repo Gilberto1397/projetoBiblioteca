@@ -35,9 +35,9 @@ services:
     container_name: container-para-postgres
     image: postgres:latest
     environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: database
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: libaryPassword
+      POSTGRES_DB: library_api
     ports:
       - "5432:5432"
     volumes:
@@ -51,9 +51,3 @@ services:
 networks:
   compose-bridge:
     driver: bridge
-#
-#volumes:
-#  php-container:
-#    driver: volume
-#  vue-container:
-#    driver: volume

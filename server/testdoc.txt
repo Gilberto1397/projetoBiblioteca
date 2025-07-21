@@ -2,33 +2,57 @@ Example (Tests\Unit\Example)
  [x] Example
 
 Author Request (Tests\Unit\Requests\AuthorRequest)
- [x] Data accepted with data set "acceptedData1"
- [x] Data accepted with data set "acceptedData2"
- [x] Data accepted with data set "acceptedData3"
- [x] Data not accepted with data set "''"
- [x] Data not accepted with data set #0
- [x] Data not accepted with data set "256chars"
- [x] Data not accepted with data set "without-name-key"
- [x] Data not accepted with data set "without-dateBirth-key"
- [x] Data not accepted with data set "2000-01-01"
- [x] Data not accepted with data set "2000/01/01"
- [x] Data not accepted with data set "2000/15/01"
- [x] Data not accepted with data set "without-nationality-key"
- [x] Data not accepted with data set #1
- [x] Data not accepted with data set "255chars"
- [x] Data name not accepted with data set "''"
- [x] Data name not accepted with data set #0
- [x] Data name not accepted with data set "256chars"
- [x] Data name not accepted with data set "without-name-key"
- [x] Data nationality not accepted with data set "''"
- [x] Data nationality not accepted with data set "without-nationality-key"
- [x] Data nationality not accepted with data set #0
- [x] Data nationality not accepted with data set "255chars"
- [x] Data date birth not accepted with data set "''"
- [x] Data date birth not accepted with data set "without-dateBirth-key"
- [x] Data date birth not accepted with data set "2000-01-01"
- [x] Data date birth not accepted with data set "2000/01/01"
- [x] Data date birth not accepted with data set "2000/15/01"
+ [x] Data accepted with data set "AuthorRequest - acceptedData1"
+ [x] Data accepted with data set "AuthorRequest - acceptedData2"
+ [x] Data accepted with data set "AuthorRequest - acceptedData3"
+ [x] Data not accepted with data set "AuthorRequest - name = ''"
+ [x] Data not accepted with data set "AuthorRequest - name = 123"
+ [x] Data not accepted with data set "AuthorRequest - name = 255 chars"
+ [x] Data not accepted with data set "AuthorRequest - without name field"
+ [x] Data not accepted with data set "AuthorRequest - dateBirth = ''"
+ [x] Data not accepted with data set "AuthorRequest - without dateBirth field"
+ [x] Data not accepted with data set "AuthorRequest - dateBirth = 2000-01-01"
+ [x] Data not accepted with data set "AuthorRequest - dateBirth = 2000/01/01"
+ [x] Data not accepted with data set "AuthorRequest - dateBirth = 2000/15/01"
+ [x] Data not accepted with data set "AuthorRequest - nationality = ''"
+ [x] Data not accepted with data set "AuthorRequest - without nationality field"
+ [x] Data not accepted with data set "AuthorRequest - nationality = 123"
+ [x] Data not accepted with data set "AuthorRequest - nationality = 255 chars"
+ [x] Data name not accepted with data set "AuthorRequest - name = ''"
+ [x] Data name not accepted with data set "AuthorRequest - name = 123"
+ [x] Data name not accepted with data set "AuthorRequest - name = 255 chars"
+ [x] Data name not accepted with data set "AuthorRequest - without name field"
+ [x] Data nationality not accepted with data set "AuthorRequest - nationality = ''"
+ [x] Data nationality not accepted with data set "AuthorRequest - without nationality field"
+ [x] Data nationality not accepted with data set "AuthorRequest - nationality = 123"
+ [x] Data nationality not accepted with data set "AuthorRequest - nationality = 255 chars"
+ [x] Data date birth not accepted with data set "AuthorRequest - dateBirth = ''"
+ [x] Data date birth not accepted with data set "AuthorRequest - without dateBirth field"
+ [x] Data date birth not accepted with data set "AuthorRequest - dateBirth = 2000-01-01"
+ [x] Data date birth not accepted with data set "AuthorRequest - dateBirth = 2000/01/01"
+ [x] Data date birth not accepted with data set "AuthorRequest - dateBirth = 2000/15/01"
+
+Gender Request (Tests\Unit\Requests\GenderRequest)
+ [x] Accepted data
+ [x] Data not accepted with data set "GenderRequest - listName = ''"
+ [x] Data not accepted with data set "GenderRequest - listName = 256 chars"
+ [x] Data not accepted with data set "GenderRequest - listName = 123"
+ [x] Data not accepted with data set "GenderRequest - listName[1] = 456"
+ [x] Data not accepted with data set "GenderRequest - singleName = ''"
+ [x] Data not accepted with data set "GenderRequest - singleName = 123"
+ [x] Data not accepted with data set "GenderRequest - singleName = 256 chars"
+ [x] Data not accepted with data set "GenderRequest - without singleName field"
+
+Publisher Request (Tests\Unit\Requests\PublisherRequest)
+ [x] Data not accepted with data set "PublisherRequest - countryOrigin = ''"
+ [x] Data not accepted with data set "PublisherRequest - countryOrigin = 123"
+ [x] Data not accepted with data set "PublisherRequest - countryOrigin = 256 chars"
+ [x] Data not accepted with data set "PublisherRequest - without countryOrigin field"
+ [x] Data not accepted with data set "PublisherRequest - name = ''"
+ [x] Data not accepted with data set "PublisherRequest - name = 123"
+ [x] Data not accepted with data set "PublisherRequest - name = 256 chars"
+ [x] Data not accepted with data set "PublisherRequest - without name field"
+ [x] Data accepted
 
 Author Service (Tests\Unit\Services\AuthorService)
  [x] Get authors true
@@ -42,6 +66,14 @@ Create Genders Service (Tests\Unit\Services\CreateGendersService)
  [x] Create genders true
  [x] Create genders false
 
+Create Publisher Service (Tests\Unit\Services\CreatePublisherService)
+ [x] Create publisher true
+ [x] Create publisher false
+
+Get Publisher Service (Tests\Unit\Services\GetPublisherService)
+ [x] Get publisher true
+ [x] Get publisher none
+
 Author Controller (Feature\Controllers\AuthorController)
  [x] Get authors true
  [x] Get authors false
@@ -50,6 +82,13 @@ Author Controller (Feature\Controllers\AuthorController)
 Gender Controller (Feature\Controllers\GenderController)
  [x] Create genders true
  [x] Create genders false
+
+Publisher Controller (Feature\Controllers\PublisherController)
+ [x] Get publishers
+ [x] Create publisher
+
+User Controller (Feature\Controllers\UserController)
+ [x] Create user true
 
 Example (Tests\Feature\Example)
  [x] Example
@@ -60,4 +99,12 @@ Author Repository Eloquent (Feature\Repositories\AuthorRepositoryEloquent)
 Gender Repository Eloquent (Feature\Repositories\GenderRepositoryEloquent)
  [x] Create genders true with data set "multiple genres"
  [x] Create genders true with data set "single genre"
+
+Publisher Repository Eloquent (Feature\Repositories\PublisherRepositoryEloquent)
+ [x] Get all publishers
+ [x] Filtered publishers with data set "idFilter"
+ [x] Filtered publishers with data set "nameFilter"
+ [x] Filtered publishers with data set "countryFilter"
+ [x] Filtered publishers with data set "nameFilterNoResults"
+ [x] Create publisher
 

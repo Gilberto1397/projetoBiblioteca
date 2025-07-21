@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Repositories;
+namespace Feature\Repositories;
 
 use App\Http\Requests\User\UserRequest;
 use App\Repositories\User\UserRepositoryEloquent;
