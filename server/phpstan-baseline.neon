@@ -124,3 +124,28 @@ parameters:
 			message: "#^Property App\\\\Models\\\\User\\:\\:\\$user_register_last_update \\(DateTime\\) does not accept string\\.$#"
 			count: 1
 			path: app/Repositories/User/UserRepositoryEloquent.php
+
+		-
+			message: "#^Call to an undefined method Faker\\\\Generator\\:\\:cellphone\\(\\)\\.$#"
+			count: 1
+			path: database/factories/UserFactory.php
+
+		-
+			message: "#^Call to an undefined method Faker\\\\Generator\\:\\:cpf\\(\\)\\.$#"
+			count: 1
+			path: database/factories/UserFactory.php
+
+		-
+			message: "#^Undefined variable\\: \\$this$#"
+			count: 1
+			path: routes/console.php
+
+		-
+			message: "#^Property App\\\\Http\\\\Requests\\\\User\\\\UserRequest\\:\\:\\$dateBirth \\(DateTime\\) does not accept string\\.$#"
+			count: 1
+			path: tests/Feature/Repositories/UserRepositoryEloquentTest.php
+
+		-
+			message: "#^Property App\\\\Models\\\\Author\\:\\:\\$author_date_birth \\(DateTime\\) does not accept string\\.$#"
+			count: 4
+			path: tests/Unit/Services/AuthorServiceTest.php
