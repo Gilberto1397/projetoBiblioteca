@@ -19,34 +19,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(['auth:sanctum'])->group(function () { //'auth:sanctum'
-    Route::controller(GenderController::class)->group(function () {
-        Route::post('/novo-genero', 'createGenders');
-    });
+Route::middleware(['auth:sanctum'])->group(function () {
+    Route::post('/novo-genero', [GenderController::class, 'createGenders']);
 
-    Route::controller(PublisherController::class)->group(function () {
-        Route::post('/nova-editora', 'createPublisher');
-        Route::get('/editoras', 'getPublishers');
-    });
+    Route::post('/nova-editora', [PublisherController::class, 'createPublisher']);
+    Route::get('/editoras', [PublisherController::class, 'getPublishers']);
 
-    Route::controller(AuthorController::class)->group(function () {
-        Route::post('/novo-autor', 'createAuthor');
-        Route::get('/autores', 'getAuthors');
-    });
+    Route::post('/novo-autor', [AuthorController::class, 'createAuthor']);
+    Route::get('/autores', [AuthorController::class, 'getAuthors']);
 
-    Route::controller(UserController::class)->group(function () {
-        Route::post('/novo-usuario', 'createUser');
-    });
+    Route::post('/novo-usuario', [UserController::class, 'createUser']);
 
-    Route::controller(BookController::class)->group(function () {
-        Route::post('/novo-livro', 'createBook');
-        Route::get('/livros', 'getBooks');
-    });
+    Route::post('/novo-livro', [BookController::class, 'createBook']);
+    Route::get('/livros', [BookController::class, 'getBooks']);
 
-    Route::controller(LoanController::class)->group(function () {
-        Route::post('/novo-emprestimo', 'createLoan');
-        Route::put('/devolve-livros', 'endLoan');
-    });
+    Route::post('/novo-emprestimo', [LoanController::class, 'createLoan']);
+    Route::put('/devolve-livros', [LoanController::class, 'endLoan']);
 });
 
 Route::get('/teste-api', function () {
