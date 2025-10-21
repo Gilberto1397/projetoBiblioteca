@@ -2,10 +2,10 @@ services:
 
   container-php:
     container_name: php-projeto-biblioteca
-#    build:
-#      context: .
-#      dockerfile: Dockerfile-php
-    image: imagem-php81:1.0
+    build:
+      context: .
+      dockerfile: Dockerfile-php
+#    image: imagem-php81:1.0
     pull_policy: never
     ports:
       - "80:80"
@@ -19,10 +19,10 @@ services:
 
   vue-container:
     container_name: vue-projeto-biblioteca
-#    build:
-#      context: .
-#      dockerfile: Dockerfile-vue
-    image: imagem-vue3:1.0
+    build:
+      context: .
+      dockerfile: Dockerfile-vue
+#    image: imagem-vue3:1.0
     pull_policy: never
     volumes:
       - type: bind
@@ -36,7 +36,10 @@ services:
 
   postgres-container:
     container_name: container-para-postgres
-    image: imagem-postgres-latest:1.0
+    build:
+      context: .
+      dockerfile: Dockerfile-postgres
+#    image: imagem-postgres-latest:1.0
     pull_policy: never
 #    environment:
 #      POSTGRES_USER: postgres
