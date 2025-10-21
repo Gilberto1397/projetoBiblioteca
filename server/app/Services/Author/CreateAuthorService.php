@@ -17,7 +17,7 @@ class CreateAuthorService
     /**
      * Create a new author in the database.
      * @param  AuthorRequest  $authorRequest
-     * @return bool
+     * @return object
      */
     public function createAuthor(AuthorRequest $authorRequest): object
     {

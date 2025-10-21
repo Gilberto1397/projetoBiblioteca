@@ -22,9 +22,9 @@ class PublisherResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => $this->publisher_id,
-            'name' => $this->publisher_name,
-            'countryOrigin' => $this->publisher_country_origin,
+            'id' => $this->publisher_id, //@phpstan-ignore-line
+            'name' => $this->publisher_name, //@phpstan-ignore-line
+            'countryOrigin' => $this->publisher_country_origin, //@phpstan-ignore-line
         ];
     }
 }

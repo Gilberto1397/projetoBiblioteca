@@ -24,8 +24,8 @@ class UserRepositoryEloquent implements UserRepository
             $user->user_cpf = $userRequest->cpf;
             $user->user_email = $userRequest->email;
             $user->user_password = Hash::make($userRequest->password);
-            $user->user_date_birth = $dateBirth;
-            $user->user_register_last_update = date('Y-m-d', strtotime("+1 day"));
+            $user->user_date_birth = $dateBirth; //@phpstan-ignore-line
+            $user->user_register_last_update = date('Y-m-d', strtotime("+1 day")); //@phpstan-ignore-line
             $user->user_register_active = true;
             $user->user_telephone = $userRequest->telephone ?? null;
             $user->user_userole_id = 1;

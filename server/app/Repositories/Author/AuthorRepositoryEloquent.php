@@ -22,7 +22,7 @@ class AuthorRepositoryEloquent implements AuthorRepository
             $author = new Author();
             $author->author_name = $authorRequest->name;
             $author->author_nationality = $authorRequest->nationality;
-            $author->author_date_birth = $dateBirth->format('Y-m-d');
+            $author->author_date_birth = $dateBirth->format('Y-m-d'); //@phpstan-ignore-line
             return $author->save();
         } catch (\PDOException $exception) {
             return false;

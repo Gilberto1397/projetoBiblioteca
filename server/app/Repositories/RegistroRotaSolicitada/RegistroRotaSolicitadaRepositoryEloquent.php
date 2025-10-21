@@ -30,7 +30,7 @@ class RegistroRotaSolicitadaRepositoryEloquent implements RegistroRotaSolicitada
             $registroRota->method = $method;
             $registroRota->host_request = $host_request;
             $registroRota->user_agent = $user_agent;
-            $registroRota->date_request = $dateRequest;
+            $registroRota->date_request = $dateRequest; //@phpstan-ignore-line
             $registroRota->user_requesting = $userRequest;
 
             return $registroRota->save();

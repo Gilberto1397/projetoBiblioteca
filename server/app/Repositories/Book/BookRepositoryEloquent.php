@@ -71,7 +71,7 @@ class BookRepositoryEloquent implements BookRepository
 
     /**
      * @param  FilteredBooksRequest  $filteredBooksRequest
-     * @return Collection|Book[]|null
+     * @return Collection|Book[]|array
      */
     public function getFilteredBooks(FilteredBooksRequest $filteredBooksRequest)
     {
@@ -81,7 +81,7 @@ class BookRepositoryEloquent implements BookRepository
             return [];
         }
 
-        return $books->get();
+        return $books->get()->all();
     }
 
     /**

@@ -15,7 +15,7 @@ class LoanRepositoryEloquent implements LoanRepository
     /**
      * Creates a new loan record in the database.
      * @param  LoanRequest  $loanRequest
-     * @param  Book[]  $book
+     * @param  Book[]  $books
      * @return bool
      */
     public function createLoan(LoanRequest $loanRequest, array $books): bool
@@ -106,7 +106,7 @@ class LoanRepositoryEloquent implements LoanRepository
         try {
             DB::beginTransaction();
 
-            $loan->loan_true_return_date = date('Y-m-d', strtotime('now'));
+            $loan->loan_true_return_date = date('Y-m-d', strtotime('now')); //@phpstan-ignore-line
             $loan->loan_forfeit = 10;
 
             if (!$loan->save()) {

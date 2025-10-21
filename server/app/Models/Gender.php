@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $gender_id
- * @property string $name
+ * @property string $gender_name
  */
 class Gender extends Model
 {

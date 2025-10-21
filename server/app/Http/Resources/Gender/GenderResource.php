@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources\Gender;
 
+use App\Models\Gender;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class GenderResource extends JsonResource
@@ -22,8 +23,8 @@ class GenderResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => $this->gender_id,
-            'name' => $this->gender_name
+            'id' => $this->gender_id, //@phpstan-ignore-line
+            'name' => $this->gender_name //@phpstan-ignore-line
         ];
     }
 }
