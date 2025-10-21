@@ -23,8 +23,8 @@ class GenderResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => $this->gender_id, //@phpstan-ignore-line
-            'name' => $this->gender_name //@phpstan-ignore-line
+            'id' => $this->gender_id,
+            'name' => $this->gender_name
         ];
     }
 }

@@ -1,0 +1,126 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Access to an undefined property Symfony\\\\Component\\\\HttpFoundation\\\\Response\\:\\:\\$original\\.$#"
+			count: 1
+			path: app/Exceptions/Handler.php
+
+		-
+			message: "#^PHPDoc tag @property has invalid value \\(\\\\DateTime dateBirth\\)\\: Unexpected token \"dateBirth\", expected variable at offset 84$#"
+			count: 1
+			path: app/Http/Requests/Author/AuthorRequest.php
+
+		-
+			message: "#^PHPDoc tag @property has invalid value \\(string name\\)\\: Unexpected token \"name\", expected variable at offset 24$#"
+			count: 1
+			path: app/Http/Requests/Author/AuthorRequest.php
+
+		-
+			message: "#^PHPDoc tag @property has invalid value \\(string nationality\\)\\: Unexpected token \"nationality\", expected variable at offset 49$#"
+			count: 1
+			path: app/Http/Requests/Author/AuthorRequest.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\Author\\\\AuthorResource\\:\\:\\$author_date_birth\\.$#"
+			count: 1
+			path: app/Http/Resources/Author/AuthorResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\Author\\\\AuthorResource\\:\\:\\$author_id\\.$#"
+			count: 1
+			path: app/Http/Resources/Author/AuthorResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\Author\\\\AuthorResource\\:\\:\\$author_name\\.$#"
+			count: 1
+			path: app/Http/Resources/Author/AuthorResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\Author\\\\AuthorResource\\:\\:\\$author_nationality\\.$#"
+			count: 1
+			path: app/Http/Resources/Author/AuthorResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\Book\\\\BookResource\\:\\:\\$author\\.$#"
+			count: 1
+			path: app/Http/Resources/Book/BookResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\Book\\\\BookResource\\:\\:\\$book_id\\.$#"
+			count: 1
+			path: app/Http/Resources/Book/BookResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\Book\\\\BookResource\\:\\:\\$book_in_stock\\.$#"
+			count: 1
+			path: app/Http/Resources/Book/BookResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\Book\\\\BookResource\\:\\:\\$book_isbn\\.$#"
+			count: 1
+			path: app/Http/Resources/Book/BookResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\Book\\\\BookResource\\:\\:\\$book_publication_date\\.$#"
+			count: 1
+			path: app/Http/Resources/Book/BookResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\Book\\\\BookResource\\:\\:\\$book_title\\.$#"
+			count: 1
+			path: app/Http/Resources/Book/BookResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\Book\\\\BookResource\\:\\:\\$gender\\.$#"
+			count: 1
+			path: app/Http/Resources/Book/BookResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\Gender\\\\GenderResource\\:\\:\\$gender_id\\.$#"
+			count: 1
+			path: app/Http/Resources/Gender/GenderResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\Gender\\\\GenderResource\\:\\:\\$gender_name\\.$#"
+			count: 1
+			path: app/Http/Resources/Gender/GenderResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\Publisher\\\\PublisherResource\\:\\:\\$publisher_country_origin\\.$#"
+			count: 1
+			path: app/Http/Resources/Publisher/PublisherResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\Publisher\\\\PublisherResource\\:\\:\\$publisher_id\\.$#"
+			count: 1
+			path: app/Http/Resources/Publisher/PublisherResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\Publisher\\\\PublisherResource\\:\\:\\$publisher_name\\.$#"
+			count: 1
+			path: app/Http/Resources/Publisher/PublisherResource.php
+
+		-
+			message: "#^Property App\\\\Models\\\\Author\\:\\:\\$author_date_birth \\(DateTime\\) does not accept string\\.$#"
+			count: 1
+			path: app/Repositories/Author/AuthorRepositoryEloquent.php
+
+		-
+			message: "#^Property App\\\\Models\\\\Loan\\:\\:\\$loan_true_return_date \\(DateTime\\) does not accept string\\.$#"
+			count: 1
+			path: app/Repositories/Loan/LoanRepositoryEloquent.php
+
+		-
+			message: "#^Property App\\\\Models\\\\RegistroRotaSolicitada\\:\\:\\$date_request \\(DateTime\\) does not accept string\\.$#"
+			count: 1
+			path: app/Repositories/RegistroRotaSolicitada/RegistroRotaSolicitadaRepositoryEloquent.php
+
+		-
+			message: "#^Property App\\\\Models\\\\User\\:\\:\\$user_date_birth \\(DateTime\\) does not accept string\\.$#"
+			count: 1
+			path: app/Repositories/User/UserRepositoryEloquent.php
+
+		-
+			message: "#^Property App\\\\Models\\\\User\\:\\:\\$user_register_last_update \\(DateTime\\) does not accept string\\.$#"
+			count: 1
+			path: app/Repositories/User/UserRepositoryEloquent.php

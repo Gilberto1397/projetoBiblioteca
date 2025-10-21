@@ -106,7 +106,7 @@ class LoanRepositoryEloquent implements LoanRepository
         try {
             DB::beginTransaction();
 
-            $loan->loan_true_return_date = date('Y-m-d', strtotime('now')); //@phpstan-ignore-line
+            $loan->loan_true_return_date = date('Y-m-d', strtotime('now'));
             $loan->loan_forfeit = 10;
 
             if (!$loan->save()) {

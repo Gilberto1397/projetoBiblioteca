@@ -6,7 +6,7 @@ use App\Http\Requests\Loan\EndLoanRequest;
 use App\Repositories\Loan\LoanRepositoryEloquent;
 use App\Services\Book\GetAvailableBookStockService;
 
-class endLoanService
+class EndLoanService
 {
     /**
      * @param  EndLoanRequest  $endLoanRequest

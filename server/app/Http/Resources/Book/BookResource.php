@@ -25,16 +25,16 @@ class BookResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => $this->book_id, //@phpstan-ignore-line
-            'title' => $this->book_title, //@phpstan-ignore-line
-            'isbn' => $this->book_isbn, //@phpstan-ignore-line
+            'id' => $this->book_id,
+            'title' => $this->book_title,
+            'isbn' => $this->book_isbn,
             'publication_date' => DateTime::createFromFormat(
                 'Y-m-d',
-                $this->book_publication_date //@phpstan-ignore-line
+                $this->book_publication_date
             )->format('d/m/Y'),
-            'inStock' => $this->book_in_stock, //@phpstan-ignore-line
-            'author' => new AuthorResource($this->author), //@phpstan-ignore-line
-            'gender' => new GenderResource($this->gender), //@phpstan-ignore-line
+            'inStock' => $this->book_in_stock,
+            'author' => new AuthorResource($this->author),
+            'gender' => new GenderResource($this->gender),
         ];
     }
 }
