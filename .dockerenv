@@ -1,0 +1,3 @@
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=libaryPassword
+POSTGRES_DB=library_api

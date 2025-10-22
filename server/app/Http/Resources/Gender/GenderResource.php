@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources\Gender;
 
+use App\Models\Gender;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class GenderResource extends JsonResource

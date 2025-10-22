@@ -15,7 +15,7 @@ class LoanRepositoryEloquent implements LoanRepository
     /**
      * Creates a new loan record in the database.
      * @param  LoanRequest  $loanRequest
-     * @param  Book[]  $book
+     * @param  Book[]  $books
      * @return bool
      */
     public function createLoan(LoanRequest $loanRequest, array $books): bool

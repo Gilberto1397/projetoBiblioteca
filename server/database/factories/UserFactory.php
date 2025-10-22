@@ -17,7 +17,8 @@ class UserFactory extends Factory
         return [
             'user_name' => $this->faker->name(),
             'user_cpf' => $this->faker->cpf(false),
-            'user_email' => $this->faker->unique()->safeEmail(),
+            //'user_email' => $this->faker->unique()->safeEmail(),
+            'user_email' => 'mail@mail.com',
             'user_email_verified_at' => now(),
             'user_password' => '$argon2id$v=19$m=65536,t=4,p=1$RGM1c2RxcVB4WDdzd3Nsdw$Px1DcPSKGcFMZ6sxCMQ7faTkJAKOYoN/7wM0bnHQLFI', // 123456
             'user_telephone' => $this->faker->cellphone(false, true),

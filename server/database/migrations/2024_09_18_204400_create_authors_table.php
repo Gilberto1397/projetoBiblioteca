@@ -15,7 +15,7 @@ return new class extends Migration
             $table->integer('author_id')->autoIncrement();
             $table->string('author_name', 255);
             $table->string('author_nationality', 255);
-            $table->date('author_date_birth', 255);
+            $table->date('author_date_birth');
         });
     }
 
