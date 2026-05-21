@@ -57,7 +57,7 @@ class PublisherRepositoryEloquent implements PublisherRepository
             $publishers->where('publisher_id', $publisherFiltersRequest->id);
         }
         if (!empty($publisherFiltersRequest->name)) {
-            $publishers->where('publisher_name', 'ilike', "%{$publisherFiltersRequest->name}%");
+            $publishers->where('publisher_name', 'like', "%{$publisherFiltersRequest->name}%");
         }
         if (!empty($publisherFiltersRequest->countryOrigin)) {
             $publishers->where('publisher_country_origin', $publisherFiltersRequest->countryOrigin);

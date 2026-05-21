@@ -35,6 +35,6 @@ class AuthorRepositoryEloquent implements AuthorRepository
      */
     public function getAuthors()
     {
-        return Author::all()->all();
+        return Author::fromQuery('SELECT * FROM authors order by author_name')->all();
     }
 }

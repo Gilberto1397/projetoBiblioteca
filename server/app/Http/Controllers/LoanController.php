@@ -18,9 +18,9 @@ class LoanController extends Controller
      */
     public function createLoan(LoanRequest $loanRequest, CreateLoanService $createLoanService): JsonResponse
     {
-        if (Gate::denies('toLoanOrReturnBook')) {
-            return response()->json(['message' => 'Não autorizado a realizar esta ação!', 'error' => true], 401);
-        }
+//        if (Gate::denies('toLoanOrReturnBook')) {
+//            return response()->json(['message' => 'Não autorizado a realizar esta ação!', 'error' => true], 401);
+//        }
 
         $response = $createLoanService->createLoan($loanRequest);
         return response()->json(

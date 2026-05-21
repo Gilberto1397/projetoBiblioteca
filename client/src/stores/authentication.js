@@ -13,7 +13,7 @@ export const useAuthenticationStore = defineStore('authentication', () => {
             email: "",
             password: "",
         },
-        loggedIn: localStorage.getItem("loggedIn") ?? false, //CASO O COOKIE DE SESSÃO SEJA EXCLUÍDO, O USUÁRIO NÃO ESTARÁ LOGADO MESMO COM O LOGGEDIN
+        loggedIn: localStorage.getItem("loggedIn") ?? false, //CASO O COOKIE DE SESSÃƒO SEJA EXCLUÃDO, O USUÃRIO NÃƒO ESTARÃ LOGADO MESMO COM O LOGGEDIN
     })
 
     const login = async () => {

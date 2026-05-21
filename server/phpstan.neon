@@ -10,7 +10,7 @@ parameters:
         - routes
         - tests
 
-    level: 3
+    level: 5
 
     ignoreErrors:
 

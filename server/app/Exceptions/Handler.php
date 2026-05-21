@@ -55,6 +55,7 @@ class Handler extends ExceptionHandler
                     ]
                 );
 
+
             return response()->json([
                 'message' => 'Ooops, parece que houve um erro na sua autenticação. Contate o suporte!',
                 'error' => true,
@@ -79,6 +80,8 @@ class Handler extends ExceptionHandler
                         'line' => $e->getLine()
                     ]
                 );
+
+            dd($e->getMessage());
 
             return response()->json([
                 'message' => 'Ooops, parece que houve um erro. Contate o suporte!',
